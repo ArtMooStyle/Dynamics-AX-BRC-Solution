@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<configuration>
+  <!--
+    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.5.1" />
+      </system.Web>
+  -->
+	<appSettings>
+		<add key="debug" value="false"></add>
+	</appSettings>	
+	
+  <location path="Styles">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Images">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <system.web>
+    <compilation targetFramework="4.0" debug="true"/>
+    <customErrors mode="RemoteOnly"/>
+    <httpRuntime requestValidationMode="2.0"/>
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID" validateRequest="false"/>
+    <authentication mode="Forms">
+      <forms loginUrl="~/Login.aspx" defaultUrl="index.aspx" timeout="3000" slidingExpiration="true"/>
+    </authentication>
+    <authorization>
+      <deny users="?"/>
+      <allow users="*"/>
+    </authorization>
+  </system.web>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+    <defaultDocument>
+      <files>
+        <remove value="iisstart.htm" />
+        <remove value="Default.asp" />
+        <remove value="default.aspx" />
+        <remove value="Default.htm" />
+        <remove value="index.htm" />
+        <remove value="index.html" />
+        <add value="index.aspx" />
+      </files>
+    </defaultDocument>
+  </system.webServer>  
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="debug">
+          <serviceDebug includeExceptionDetailInFaults="true"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <bindings>
+		<basicHttpBinding>
+			<binding name="BigBinding">
+				<readerQuotas maxDepth="32" maxStringContentLength="5242880" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+			</binding>
+		</basicHttpBinding>
+	</bindings>
+    <client>
+      <endpoint address="http://10.1.1.35:8055/BCSWS.svc" binding="basicHttpBinding"
+        bindingConfiguration="BigBinding" contract="BCSWSReference.IService"
+        name="BasicHttpBinding_IService" />
+    </client>
+  </system.serviceModel>
+</configuration>

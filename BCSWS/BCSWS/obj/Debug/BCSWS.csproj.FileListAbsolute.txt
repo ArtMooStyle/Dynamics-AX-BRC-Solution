@@ -1,0 +1,17 @@
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BRWS\bin\BCSWS.dll.config
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BRWS\bin\BCSWS.dll
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BRWS\bin\BCSWS.pdb
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BRWS\obj\Debug\BCSWS.csprojResolveAssemblyReference.cache
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BRWS\obj\Debug\BCSWS.dll
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BRWS\obj\Debug\BCSWS.pdb
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BCSWS\bin\BCSWS.dll.config
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BCSWS\bin\BCSWS.dll
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BCSWS\bin\BCSWS.pdb
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BCSWS\obj\Debug\BCSWS.dll
+D:\Work\Clients\Drylock\DEV\Drylock\BCSWS\BCSWS\obj\Debug\BCSWS.pdb
+D:\Work\Clients\Firmadat\DEV\trunk\Zakazky\Drylock\BCSWS\BCSWS\bin\BCSWS.dll.config
+D:\Work\Clients\Firmadat\DEV\trunk\Zakazky\Drylock\BCSWS\BCSWS\bin\BCSWS.dll
+D:\Work\Clients\Firmadat\DEV\trunk\Zakazky\Drylock\BCSWS\BCSWS\bin\BCSWS.pdb
+D:\Work\Clients\Firmadat\DEV\trunk\Zakazky\Drylock\BCSWS\BCSWS\obj\Debug\BCSWS.csprojResolveAssemblyReference.cache
+D:\Work\Clients\Firmadat\DEV\trunk\Zakazky\Drylock\BCSWS\BCSWS\obj\Debug\BCSWS.dll
+D:\Work\Clients\Firmadat\DEV\trunk\Zakazky\Drylock\BCSWS\BCSWS\obj\Debug\BCSWS.pdb

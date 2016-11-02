@@ -1,0 +1,6 @@
+D:\Work\Clients\Drylock\DEV\Drylock\BRWS\BRWS\bin\BRWS.dll.config
+D:\Work\Clients\Drylock\DEV\Drylock\BRWS\BRWS\bin\BRWS.dll
+D:\Work\Clients\Drylock\DEV\Drylock\BRWS\BRWS\bin\BRWS.pdb
+D:\Work\Clients\Drylock\DEV\Drylock\BRWS\BRWS\obj\Release\BRWS.dll
+D:\Work\Clients\Drylock\DEV\Drylock\BRWS\BRWS\obj\Release\BRWS.pdb
+D:\Work\Clients\Drylock\DEV\Drylock\BRWS\BRWS\obj\Release\BRWS.csprojResolveAssemblyReference.cache

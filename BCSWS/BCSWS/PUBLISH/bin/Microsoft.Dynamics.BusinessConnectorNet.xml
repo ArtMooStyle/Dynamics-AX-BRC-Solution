@@ -1,0 +1,1040 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.Dynamics.BusinessConnectorNet</name>
+	</assembly>
+	<members>
+		<member name="N:Microsoft.Dynamics">
+			<summary>The <see cref="N:Microsoft.Dynamics"></see> namespace contains the <see cref="T:Microsoft.Dynamics.AxaptaException"></see> class.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.AxaptaException">
+			<summary>The <see cref="T:Microsoft.Dynamics.AxaptaException"></see> exception is thrown when an unexpected Axapta error has occurred. The <see cref="T:Microsoft.Dynamics.AxaptaException"></see> class serves as a base class for several exceptions in the <see cref="N:Microsoft.Dynamics.BusinessConnectorNet"></see> namespace.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.AxaptaException.#ctor">
+			<summary>The <see cref="M:Microsoft.Dynamics.AxaptaException()"></see> constructor creates an instance of the <see cref="T:Microsoft.Dynamics.AxaptaException"></see> class.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.AxaptaException.#ctor(System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.AxaptaException(System.String)"></see> constructor creates an instance of the <see cref="T:Microsoft.Dynamics.AxaptaException"></see> class by using the specified error message.</summary>
+			<param name="msg">The error message that is used to create this instance of the <see cref="T:Microsoft.Dynamics.AxaptaException"></see> class.</param>
+		</member>
+		<member name="M:Microsoft.Dynamics.AxaptaException.#ctor(System.String,System.Exception)">
+			<summary>The <see cref="M:Microsoft.Dynamics.AxaptaException(System.String)"></see> constructor creates an instance of the <see cref="T:Microsoft.Dynamics.AxaptaException"></see> class by using the specified error message and exception.</summary>
+			<param name="msg">The error message that is used to create this instance of the <see cref="T:Microsoft.Dynamics.AxaptaException"></see> class.</param>
+			<param name="ex">The exception that is used to create this instance of the <see cref="T:Microsoft.Dynamics.AxaptaException"></see> class.</param>
+		</member>
+		<member name="F:Microsoft.Dynamics.AxaptaException.errorCode">
+			<summary>The <see cref="F:Microsoft.Dynamics.AxaptaException.ErrorCode"></see> field contains the error code value for the <see cref="T:Microsoft.Dynamics.AxaptaException"></see> object.</summary>
+		</member>
+		<member name="N:Microsoft.Dynamics.BusinessConnectorNet">
+			<summary>The <see cref="N:Microsoft.Dynamics.BusinessConnectorNet"></see> namespace, along with the <see cref="N:Microsoft.Dynamics"></see> namespace, provides the .NET classes for the Axapta Business Connector.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AlreadyLoggedOnException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AlreadyLoggedOnException"></see> exception is thrown when logon to Axapta fails because the user session is already logged on.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.Axapta">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.Axapta"></see> class provides the ability to connect to the Axapta system, create Axapta classes, create Axapta record, container, and buffer objects, execute transactions, and perform other Axapta system tasks.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.#ctor">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta()"></see> constructor creates an instance of the Axapta class.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallJob(System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallJob(System.String)"></see> method calls the specified Axapta job.</summary>
+			<param name="jobName">The name of the Axapta job to call.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">The requested operation cannot be performed because the required security key does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallJob(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallJob(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject)"></see> method calls the specified Axapta job using the specified job arguments.</summary>
+			<param name="argsObject">The arguments being passed to jobName. This parameter can be null.</param>
+			<param name="jobName">The name of the Axapta job to call.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">The requested operation cannot be performed because the required security key does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String)"></see> method calls the specified static member method of the specified Axapta class.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="className">The name of the Axapta class whose static method is to be called.</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">The requested operation cannot be performed because the required security key does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String,System.Object)"></see> method calls the specified static member method of the specified Axapta class using the specified parameters.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="className">The name of the Axapta class whose static method is to be called.</param>
+			<param name="param1">The parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">The requested operation cannot be performed because the required security key does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String,System.Object[])">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String,System.Object[])"></see> method calls the specified static member method of the specified Axapta class using the specified parameter list.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="paramList">An array of parameters passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="className">The name of the Axapta class whose static method is to be called.</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">The requested operation cannot be performed because the required security key does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String,System.Object,System.Object)"></see> method calls the specified static member method of the specified Axapta class by using two specified parameters.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="param2">The second parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="className">The name of the Axapta class whose static method is to be called.</param>
+			<param name="param1">The first parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">The requested operation cannot be performed because the required security key does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String,System.Object,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod(System.String,System.String,System.Object,System.Object,System.Object)"></see> method calls the specified static member method of the specified Axapta class using three specified parameters.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="param3">The third parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="param2">The second parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="className">The name of the Axapta class whose static method is to be called.</param>
+			<param name="param1">The first parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">The requested operation cannot be performed because the required security key does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String)"></see> method calls the specified static member method of the specified Axapta record.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="recordName">The name of the Axapta record whose static method is to be called. The name of the Axapta record corresponds to the table name in the Application Object Table (AOT).</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownRecordException">recordName is an unknown Axapta record.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String,System.Object)"></see> method calls the specified static member method of the specified Axapta record by using the specified parameter.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="recordName">The name of the Axapta record whose static method is to be called. The name of the Axapta record corresponds to the table name in the AOT.</param>
+			<param name="param1">The parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownRecordException">recordName is an unknown Axapta record.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String,System.Object[])">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String,System.Object[])"></see> method calls the specified static member method of the specified Axapta record using the specified parameter list.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="paramList">The array of parameters passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="recordName">The name of the Axapta record whose static method is to be called. The name of the Axapta record corresponds to the table name in the AOT.</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownRecordException">recordName is an unknown Axapta record.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String,System.Object,System.Object)"></see> method calls the specified static member method of the specified Axapta record by using two specified parameters.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="param2">The second parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="recordName">The name of the Axapta record whose static method is to be called. The name of the Axapta record corresponds to the table name in the AOT.</param>
+			<param name="param1">The first parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownRecordException">recordName is an unknown Axapta record.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String,System.Object,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticRecordMethod(System.String,System.String,System.Object,System.Object,System.Object)"></see> method calls the specified static member method of the specified Axapta record by using three specified parameters.</summary>
+			<returns>The return value is the object returned by the called static method. For information about the returned object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</returns>
+			<param name="param3">The third parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="param2">The second parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="recordName">The name of the Axapta record whose static method is to be called. The name of the Axapta record corresponds to the table name in the AOT.</param>
+			<param name="param1">The first parameter passed to the static member method. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</param>
+			<param name="methodName">The name of the static member method to be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is an unknown Axapta method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownRecordException">recordName is an unknown Axapta record.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For information about the supported data types for returned objects, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CallStaticClassMethod"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaBuffer">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaBuffer"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer"></see> object.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer"></see> object.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaContainer">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaContainer"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String)"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</returns>
+			<param name="className">The name of the Axapta class for the object that will be created.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String,System.Object)"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</returns>
+			<param name="className">The name of the Axapta class for the object that will be created.</param>
+			<param name="param1">The parameter used to create the Axapta object. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject"></see>.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String,System.Object[])">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String,System.Object[])"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</returns>
+			<param name="paramList">An array of parameters used to create the Axapta object. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject"></see>.</param>
+			<param name="className">The name of the Axapta class for the object that will be created.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String,System.Object,System.Object)"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</returns>
+			<param name="param2">The second parameter used to create the Axapta object.</param>
+			<param name="className">The name of the Axapta class for the object that will be created.</param>
+			<param name="param1">The first parameter used to create the Axapta object. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject"></see>.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String,System.Object,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject(System.String,System.Object,System.Object,System.Object)"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</returns>
+			<param name="param3">The third parameter used to create the Axapta object.</param>
+			<param name="param2">The second parameter used to create the Axapta object.</param>
+			<param name="className">The name of the Axapta class for the object that will be created.</param>
+			<param name="param1">The first parameter used to create the Axapta object. For information about the supported data object types, see <see cref="Overload:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaObject"></see>.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">className is an unknown Axapta class.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaRecord(System.Int32)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaRecord(System.Int32)"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object using the specified table ID.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object.</returns>
+			<param name="recordId">The numerical representation of the table ID as stored in the AOT.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownRecordException">recordId is an unknown Axapta record.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaRecord(System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.CreateAxaptaRecord(System.String)"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object using the specified table name.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object.</returns>
+			<param name="recordName">The table name as stored in the AOT.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownRecordException">recordName is an unknown Axapta record.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Dispose">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Dispose"></see> method releases the resources used by the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.Axapta"></see> object.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.ExecuteStmt(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.ExecuteStmt(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord)"></see> method executes a statement on the specified <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object.</summary>
+			<param name="statement">The statement to execute on the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects.</param>
+			<param name="param1">The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object to substitute for %1 in the statement. </param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.ExecuteStmt(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord[])">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.ExecuteStmt(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord[])"></see> method executes a statement on the specified array of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects.</summary>
+			<param name="paramList">The array of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects to substitute for the %n placeholders in the statement. The first placeholder is %1.</param>
+			<param name="statement">The statement to execute on the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.ExecuteStmt(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.ExecuteStmt(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord)"></see> method executes a statement on the specified pair of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects.</summary>
+			<param name="param2">The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object to substitute for %2 in the statement.</param>
+			<param name="statement">The statement to execute on the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects.</param>
+			<param name="param1">The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object to substitute for %1 in the statement.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.ExecuteStmt(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.ExecuteStmt(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord)"></see> method executes a statement on the specified trio of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects.</summary>
+			<param name="param3">The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object to substitute for %3 in the statement.</param>
+			<param name="param2">The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object to substitute for %2 in the statement.</param>
+			<param name="statement">The statement to execute on the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects.</param>
+			<param name="param1">The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object to substitute for %1 in the statement.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.AxaptaException">An unexpected error has occurred with Axapta.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetBufferCount">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetBufferCount"></see> method retrieves the number of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer"></see> objects.</summary>
+			<returns>The return value is the number of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer"></see> objects.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetContainerCount">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetContainerCount"></see> method retrieves the number of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> objects.</summary>
+			<returns>The return value is the number of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> objects.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetLoggedOnAxaptaObjectCount">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetLoggedOnAxaptaObjectCount"></see> method retrieves the number of users logged on to the Axapta system for the current instance of the Business Connector.</summary>
+			<returns>The return value is the number of users logged on to the Axapta system for the current instance of the Business Connector.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownClassHandleException">The class being referenced does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetObject(System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetObject(System.String)"></see> method creates an <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object and attaches it to a global Axapta object.</summary>
+			<returns>The return value is the created <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</returns>
+			<param name="objectName">The name of the global Axapta object to retrieve and associate with the returned <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object. This can be one of the following values:ApplClassFactoryInfoLog </param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownClassHandleException">objectName is an unknown global Axapta object.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetObjectCount">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetObjectCount"></see> method retrieves the number of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> objects.</summary>
+			<returns>The return value is the number of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> objects.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetRecordCount">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.GetRecordCount"></see> method returns the number of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects.</summary>
+			<returns>The return value is the number of <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> objects.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Logoff">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Logoff"></see> method disconnects from Axapta. </summary>
+			<returns>The return value is true if the Axapta object was logged off after having been previously logged on, and false if the Axapta object was not previously logged on.</returns>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Logon(System.String,System.String,System.String,System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Logon(System.String,System.String,System.String,System.String)"></see> method connects to the Axapta system.</summary>
+			<param name="language">The language to use for Axapta labels. This parameter is optional and is used to override the corresponding parameter in the configuration being used. If there is no override value, specify the keyword null.</param>
+			<param name="company">The company to activate. This parameter is optional and is used to override the corresponding parameter in the configuration being used. If there is no override value, specify the keyword null.</param>
+			<param name="configuration">The name of the Axapta configuration to use while logging on. This parameter is optional. If null is specified for this parameter and Business Connector is being executed within the context of an interactive Microsoft Windows account, Business Connector will use the default configuration (maintained by the Axapta Client Configuration Utility). If Business Connector is being executed within the context of a non-interactive Windows account (such as the Business Connector Proxy AD user), this parameter is used to specify the path that points to an exported configuration file.</param>
+			<param name="objectServer">The Axapta Object Server to use for the connection. This parameter is optional and is used to override the corresponding parameter in the configuration being used. If there is no override value, specify the keyword null.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AlreadyLoggedOnException">The requested operation cannot be performed because the user is already logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.LogonSystemChangedException">The logon failed because the logon parameters do not match those currently being used in Business Connector.</exception>
+			<exception cref="T:System.OutOfMemoryException">There is insufficient memory to complete the requested operation.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.LogonAs(System.String,System.String,System.Net.NetworkCredential,System.String,System.String,System.String,System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.LogonAs(System.String,System.String,System.Net.NetworkCredential,System.String,System.String,System.String,System.String)"></see> method connects to MSDAX on behalf of a specific MSDAX user.</summary>
+			<param name="user">Name of the Microsoft Windows user to use to log on to MSDAX. Do not use the Axapta user name; use the NT alias that is connected to the Axapta account. This parameter is optional if you have set up your MSDAX user ID to automatically login to MSDAX. For example, ntuser.To use the current user, specify the null keyword for the bcProxyCredentials parameter.</param>
+			<param name="language">The language to use for MSDAX labels. Used to override the corresponding parameter in the user options.For example, "en-us".If this parameter is not intended to be used, specify "" to indicate empty; optional. </param>
+			<param name="company">The company you want to select for the session to which you will log on to. Used to override the corresponding parameter in the configuration being used.For example, "dat".If this parameter is not intended to be used, specify "" to indicate empty; optional.</param>
+			<param name="bcProxyCredentials">Credentials of the Business Connector Proxy user used to authenticate and enable the use of LogonAs.For more information on creating a proxy user, see !!ShortCutSTART!!ms-its:AXInstallationGuide.chm::/html/3e46dc0a-2ff4-4a06-ae61-041e52dcc774.htm!!ShortCutMID!!Set the Business Connector proxy user!!ShortCutEND!!.You can create a NetworkCredential object with the following code:System.Net.NetworkCredential creds = new System.Net.NetworkCredential(
+ADUserName, ADUserPassword, ADDomain)The NetworkCredential parameters must match the Business Connector Proxy user set in the Business Connector Proxy dialog box: To verify your settings go to the Administration pane, click Setup, click Security, and then select BusinessConnectorProxy.</param>
+			<param name="configuration">Name of the MSDAX configuration to use while logging on.For example, Business Connector Proxy Active Directory user.A configuration file can be used if you point to the physical axc file. To create an axc file, in the MSDAX Configuration Utility, click the Manage button and then click SaveConfigurationasfile. This will create a file with an .axc extension that can launch MSDAX.If "" is specified for this parameter and Business Connector is being executed within the context of an interactive Windows account, Business Connector uses the default configuration. This is maintained by the MSDAX configuration utility where the target is set to the local client. When executing Business Connector within the context of a non-interactive Windows account, Business Connector uses the default configuration where the target is set to Business Connector (non-interactive use only).An interactive account means you are using a client interface. Examples include running an application from Visual Studio or running an executable. A non-interactive account indicates that the process does not belong to a user Windows session or workstation.</param>
+			<param name="objectServer">The MSDAX Application Object Server (AOS) to connect to. Used to override the corresponding parameter in the configuration being used.For example, "Company1@AosInstance:PortNumber.To determine the Server Name, Instance Name and TCP/IP Port number, click the Start menu, click Administrative tools and then select Microsoft Dynamics AX 4.1 Configuration Utility. In the client configuration window, select the Connection tab. The Server Name, Instance Name and TCP/IP Port number AOS instance is displayed.If this parameter is not intended to be used, specify "" to indicate empty; optional. In a production environment, specify the port rather than using a configuration. This will assure that you are using the correct AOS. This is especially important when you have AIF, EP or batch servers that you want directed at a single AOS versus the AOS that the clients use. Specifying the port is a direct way of identifying the AOS to use.</param>
+			<param name="domain">The domain associated with the Windows user. This parameter is optional.For example, domain.corp.companyname.com.If this parameter is not intended to be used, specify "" to indicate empty. </param>
+			<exception cref="T:System.OutOfMemoryException">There is insufficient memory to complete the requested operation.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.LogonSystemChangedException">The logon failed because the logon parameters do not match those currently being used in Business Connector because of a previous logon is using that instance of the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AlreadyLoggedOnException">The requested operation cannot be performed because the user is already logged on to MSDAX.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">The requested operation cannot be performed because the required security key does not exist.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.LogonAsGuest(System.Net.NetworkCredential,System.String,System.String,System.String,System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.LogonAsGuest(System.Net.NetworkCredential,System.String,System.String,System.String,System.String)"></see> method connects to the Axapta system as the Axapta guest user.</summary>
+			<param name="language">The language to use for Axapta labels. This parameter is optional and is used to override the corresponding parameter in the configuration being used. If this parameter is not intended to be used, specify the keyword null.</param>
+			<param name="ImpersonatorCredentials">The Windows credentials for the Windows user who will act on behalf of the quest user being logged on to Axapta.</param>
+			<param name="configuration">Name of Axapta configuration to use while logging on. This parameter is optional. If null is specified for this parameter and Business Connector is being executed within the context of an interactive Windows account, Business Connector will use the default configuration (maintained by the Axapta Client Configuration Utility). If Business Connector is being executed within the context of a non-interactive Windows account (such as the Business Connector Proxy AD user), then this parameter is used to specify the path which points to an exported configuration file.</param>
+			<param name="objectServer">Name of the Axapta Object Server to connect to. This parameter is optional and is used to override the corresponding parameter in the configuration being used. If this parameter is not intended to be used, specify the keyword null.</param>
+			<param name="Company">The company to activate. This parameter is optional and is used to override the corresponding parameter in the configuration being used. If this parameter is not intended to be used, specify the keyword null.</param>
+			<exception cref="T:System.OutOfMemoryException">There is insufficient memory to complete the requested operation.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.LogonAsGuestNotSupportedException">The logon failed because the Axapta guest user has not been created or the HTTP context is not accessible from the .NET Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AlreadyLoggedOnException">The requested operation cannot be performed because the user is already logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.LogonSystemChangedException">The logon failed because the logon parameters do not match those currently being used in Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">The requested operation cannot be performed because the required security key does not exist.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Refresh">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Refresh"></see> method clears the internal memory cache, including the cached database information. This method is intended only for development use, specifically to have the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.Axapta"></see> object reread the Axapta application code without requiring a logoff/logon sequence. As <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Refresh"></see> clears the internal cache, it is not recommended that this method be called every time a user logs on to a Web site. Calling <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Refresh"></see> would greatly decrease the performance time of the Web site.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Session">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.Session"></see> method returns the session ID.</summary>
+			<returns>The return value is the ID of the session.</returns>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSAbort">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSAbort"></see> method calls the ttsabort function of the Axapta X++ language. Use <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSAbort"></see> to abort a transaction started by a previous call to <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSBegin"></see>.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSBegin">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSBegin"></see> method calls the ttsbegin function of the Axapta X++ language. Use <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSBegin"></see> to start a transaction that can either be committed by <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSCommit"></see> or aborted by <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSAbort"></see>.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSCommit">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSCommit"></see> method calls the ttscommit function of the Axapta X++ language. Use <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSCommit"></see> to commit a transaction previously started by <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.TTSBegin"></see>.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">The requested operation cannot be performed because the user is not logged on to Axapta.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.Axapta.HttpContextAccessible">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.Axapta.HttpContextAccessible"></see> property returns a value that indicates whether the HTTP context is accessible from the .NET Business Connector.</summary>
+			<returns>The return value is true if the HTTP context is accessible from the .NET Business Connector, or false if the HTTP context is not accessible from the .NET Business Connector, which is the case when the .NET Business Connector is used by an application that is not running IIS and ASP.NET.</returns>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer"></see> class provides the ability add data to and retrieve data from an Axapta buffer.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer.Dispose">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer.Dispose"></see> method releases the resources used by the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer"></see> object.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer.get_Size">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer.get_Size"></see> method retrieves the size, in bytes, of the buffer.</summary>
+			<returns>The return value is an int that represents the size, in bytes, of the buffer.</returns>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer.GetData">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer.GetData"></see> method retrieves the data in the buffer.</summary>
+			<returns>The return value is an array of byte elements that represent the data that is contained in the buffer.</returns>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer.SetData(System.Byte[])">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBuffer.SetData(System.Byte[])"></see> method assigns data to the buffer.</summary>
+			<param name="data">The data being assigned to the buffer.</param>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBufferNotValidException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaBufferNotValidException"></see> exception is thrown when the Axapta buffer being referenced is not valid.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> class provides the ability to read and write to and from Axapta containers.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Add(System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Add(System.Object)"></see> method adds an item to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<returns>The return value is the one-based index in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object where value was added.</returns>
+			<param name="value">The item being added to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object. For more information, see Remarks.</param>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid. For information about the valid types for value, see Remarks.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.AddRange(System.Collections.ICollection)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.AddRange(System.Collections.ICollection)"></see> method adds a collection of items to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<param name="collection">The collection of items being added to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object. collection must not be an empty collection.</param>
+			<exception cref="T:System.ArgumentException">collection is either an empty collection or contains an item with an invalid type. For information about the valid types for items in collection, see Remarks.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Clear">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Clear"></see> method removes all items from the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Contains(System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Contains(System.Object)"></see> method returns a value that indicates whether the specified items exists in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<returns>The return value is true if value is found in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object; otherwise, the return value is false.</returns>
+			<param name="value">The item whose existence in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object is being queried.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.CopyTo(System.Array,System.Int32)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.CopyTo(System.Array,System.Int32)"></see> method copies the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object to the specified array.</summary>
+			<param name="index">The zero-based index in array that specifies the starting point for the items being copied.</param>
+			<param name="array">The target array where the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object is to be copied.</param>
+			<exception cref="T:System.InvalidCastException">The items in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object are not of the same type. </exception>
+			<exception cref="T:System.ArgumentOutOfRangeException">index is not within the allowable range for array.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.ArgumentException">array is empty.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Dispose">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Dispose"></see> method releases resources used by the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.GetEnumerator">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.GetEnumerator"></see> method returns an enumerator that can iterate the items in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<returns>The return value is an <see cref="T:Systems.Collections.IEnumerator"></see> object that can be used to iterate the items in the collection.</returns>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IndexOf(System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IndexOf(System.Object)"></see> method returns the index of the specified item in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<returns>The return value is the one-based index in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object for the position of value, or -1 if value is not in the collection.</returns>
+			<param name="value">The item whose position in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object is being queried. For a list of the supported types, see the Remarks section of <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Add(System.Object)"></see>.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IndexOfRange(System.Collections.ICollection)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IndexOfRange(System.Collections.ICollection)"></see> method the index of the specified collection in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<returns>The return value is the one-based index in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object for the position of collection, or -1 if collection is not in the collection.</returns>
+			<param name="collection">The collection whose position in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object is being queried. collection must not be an empty collection. For a list of the supported types, see the Remarks section of <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Add(System.Object)"></see>.</param>
+			<exception cref="T:System.ArgumentException">collection is an empty collection.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Insert(System.Int32,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Insert(System.Int32,System.Object)"></see> method inserts the specified object to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</summary>
+			<param name="value">The object being inserted into the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection. For a list of the supported types for value, see the Remarks section of <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Add(System.Object)"></see>.</param>
+			<param name="index">The one-based index in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection that specifies the position for value.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.ArgumentOutOfRangeException">index is not within the allowable range for the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.InsertRange(System.Int32,System.Collections.ICollection)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.InsertRange(System.Int32,System.Collections.ICollection)"></see> method inserts the specified collection to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</summary>
+			<param name="collection">The collection being added to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection. collection must not be an empty collection. For a list of the supported types, see the Remarks section of <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Add(System.Object)"></see>.</param>
+			<param name="index">The one-based index in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection that specifies the starting position for collection.</param>
+			<exception cref="T:System.ArgumentException">collection is an empty collection.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.ArgumentOutOfRangeException">index is not within the allowable range for the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Remove(System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Remove(System.Object)"></see> method removes the first occurrence of the specified object from the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</summary>
+			<param name="value">The object being removed from the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection. For a list of the supported types, see the Remarks section of <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Add(System.Object)"></see>.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.RemoveAt(System.Int32)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.RemoveAt(System.Int32)"></see> method removes the object at the specified index from the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</summary>
+			<param name="index">The one-based index for the item to remove from the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.ArgumentOutOfRangeException">index is not within the allowable range for the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.RemoveRange(System.Int32,System.Int32)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.RemoveRange(System.Int32,System.Int32)"></see> method removes a set of items from the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</summary>
+			<param name="count">The number of items to remove from the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</param>
+			<param name="index">The one-based index for the starting position of the items to remove from the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:System.ArgumentOutOfRangeException">index is not within the allowable range for the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> collection.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Count">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Count"></see> property returns the number of items in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<returns>The return value is the number items in the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IsFixedSize">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IsFixedSize"></see> property returns a value that indicates whether the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object has a fixed size.</summary>
+			<returns>The return value is true if the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object has a fixed size; otherwise, the return value is false.</returns>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IsReadOnly">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IsReadOnly"></see> property returns a value that indicates whether the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object is read-only.</summary>
+			<returns>The return value is true if the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object is read-only; otherwise the return value is false.</returns>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IsSynchronized">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.IsSynchronized"></see> property returns a value that indicates whether access to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object is synchronized (thread-safe).</summary>
+			<returns>The return value is true if the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object is synchronized; otherwise, the return value is false.</returns>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Item(System.Int32)">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Item(System.Int32)"></see> property gets or sets the item at the specified index of the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<returns>The element at the specified index.</returns>
+			<param name="index">The one-based index of the element to get or set.</param>
+			<exception cref="T:System.ArgumentOutOfRangeException">index is less than one, or index is greater than <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.Count"></see>.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.SyncRoot">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer.SyncRoot"></see> property returns an object that can be used to synchronize access to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</summary>
+			<returns>An object that can be used to synchronize access to the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainer"></see> object.</returns>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainerNotValidException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaContainerNotValidException"></see> exception is thrown when the Axapta container being referenced is not valid.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> class provides the ability to call Axapta class methods.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String)"></see> method calls the specified Axapta member method.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</returns>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObjectNotValidException">The Axapta object being referenced does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is not a valid non-static member method.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String,System.Object)"></see> method calls a member method of an Axapta object with the specified parameter.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</returns>
+			<param name="param1">The parameter passed to the called method. For more information about parameters passed to the called method, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</param>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObjectNotValidException">The Axapta object being referenced does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is not a valid non-static member method.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String,System.Object[])">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String,System.Object[])"></see> method calls a member method of an Axapta object with the specified parameter list.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</returns>
+			<param name="paramList">The parameter list passed to the called method. For more information about parameters passed to the called method, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</param>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObjectNotValidException">The Axapta object being referenced does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is not a valid non-static member method.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String,System.Object,System.Object)"></see> method calls a member method of an Axapta object with the specified two parameters.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</returns>
+			<param name="param2">The second parameter passed to the called method.</param>
+			<param name="param1">The first parameter passed to the called method. For more information about parameters passed to the called method, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</param>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObjectNotValidException">The Axapta object being referenced does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is not a valid non-static member method.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String,System.Object,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Call(System.String,System.Object,System.Object,System.Object)"></see> method calls a member method of an Axapta object with the specified three parameters.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</returns>
+			<param name="param3">The third parameter passed to the called method.</param>
+			<param name="param2">The second parameter passed to the called method.</param>
+			<param name="param1">The first parameter passed to the called method. For more information about parameters passed to the called method, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</param>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObjectNotValidException">The Axapta object being referenced does not exist.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodNameis not a valid non-static member method.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Dispose">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject.Dispose"></see> method releases resources used by the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObject"></see> object.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObjectNotValidException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaObjectNotValidException"></see> exception is thrown when the Axapta object being referenced does not exist.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> class provides functionality for reading and modifying Axapta records.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String)"></see> method calls the specified Axapta member method.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</returns>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is not a valid non-static member method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">The Axapta record being referenced does not exist.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String,System.Object)"></see> calls a member method of an Axapta record with the specified parameter.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</returns>
+			<param name="param1">The parameter passed to the called method. For more information about parameters passed to the called method, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</param>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is not a valid non-static member method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">The Axapta record being referenced does not exist.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String,System.Object[])">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String,System.Object[])"></see> method calls a member method of an Axapta record with the specified parameter list.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</returns>
+			<param name="paramList">The parameter list passed to the called method. For more information about parameters passed to the called method, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</param>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is not a valid non-static member method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">The Axapta record being referenced does not exist.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String,System.Object,System.Object)"></see> method calls a member method of an Axapta record with the specified two parameters.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</returns>
+			<param name="param2">The second parameter passed to the called method.</param>
+			<param name="param1">The first parameter passed to the called method. For more information about parameters passed to the called method, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</param>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is not a valid non-static member method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">The Axapta record being referenced does not exist.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String,System.Object,System.Object,System.Object)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Call(System.String,System.Object,System.Object,System.Object)"></see> method calls a member method of an Axapta record with the specified two parameters.</summary>
+			<returns>The return value is the object that contains the result code of the called method. For more information about the returned object, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</returns>
+			<param name="param3">The third parameter passed to the called method.</param>
+			<param name="param2">The second parameter passed to the called method.</param>
+			<param name="param1">The first parameter passed to the called method. For more information about parameters passed to the called method, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</param>
+			<param name="methodName">The name of the member method to call. Only non-static member methods of a class can be called.</param>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">methodName is not a valid non-static member method.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">The Axapta record being referenced does not exist.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Clear">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Clear"></see> method clears the contents of the Axapta record. This method resembles calling the clear member method of a record in the Axapta X++ language.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Delete">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Delete"></see> method deletes the Axapta record. Calling this method resembles calling the delete member method of a record in the Axapta X++ language.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Dispose">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Dispose"></see> method releases resources used by the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see> object.</summary>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.DoDelete">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.DoDelete"></see> method deletes the Axapta record. Calling this method resembles calling the doDelete member method of a record in the Axapta X++ language. Calling <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.DoDelete"></see> ensures that any Axapta X++ code written in the delete member method of the record is not executed. Calling <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Delete"></see> always executes the Axapta X++ code written in the delete member method of the record.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.DoInsert">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.DoInsert"></see> method inserts the Axapta record into the database. Calling this method resembles calling the doInsert member method of a record in the Axapta X++ language. Calling <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.DoInsert"></see> ensures that any Axapta X++ code written in the insert member method of the record is not executed. Calling <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Insert"></see> always executes the Axapta X++ code written in the insert member method of the record.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.DoUpdate">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.DoUpdate"></see> method updates the Axapta record into the database. Calling this method resembles calling the doUpdate member method of a record in the Axapta X++ language. Calling <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.DoUpdate"></see> ensures that any Axapta X++ code written in the update member method of the record is not executed. Calling <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Update"></see> always executes the Axapta X++ code written in the update member method of the record.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ExecuteStmt(System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ExecuteStmt(System.String)"></see> method executes a statement on the Axapta record. When multiple Axapta records are needed for the statement, use the <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.Axapta.ExecuteStmt(System.String,Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord)"></see> method of the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.Axapta"></see> class or one of its overloads.</summary>
+			<param name="statement">The statement to execute.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.InitValue">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.InitValue"></see> method initializes the fields of the Axapta record. Calling this method resembles calling the initValue member method of a record in the Axapta X++ language</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Insert">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Insert"></see> method inserts the Axapta record into the database. Calling this method resembles calling the insert member method of a record in the Axapta X++ language.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Next">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Next"></see> method retrieves the next Axapta record from the sequence of Axapta records returned by a previous call to <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ExecuteStmt(System.String)"></see>.</summary>
+			<returns>The return value is true if a record was found, or false if a record was not found.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.PostLoad">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.PostLoad"></see> method calls the postLoad member method of the Axapta record. Whenever a record is read from the database, the postLoad member method of the Axapta record is automatically called. The postLoad member method of the Axapta record can be overridden in Axapta X++ to accomplish specific behavior.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Reread">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Reread"></see> method rereads the fields of the Axapta record. Calling this method resembles calling the reread member method of a record in the Axapta X++ language.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Update">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Update"></see> method updates the Axapta record. </summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ValidateDelete">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ValidateDelete"></see> method checks whether the Axapta record can be deleted. Calling this method resembles calling the validateDelete member method of a record in the Axapta X++ language.</summary>
+			<returns>The return value is true if the record can be deleted, or false if the record cannot be deleted.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ValidateField(System.Int32)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ValidateField(System.Int32)"></see> method checks whether the specified field, identified by numeric ID, of the Axapta record is valid. Calling this method resembles calling the validateField member method of a record in the Axapta X++ language.</summary>
+			<returns>The return value is true if the field is valid, or false if the field is not valid.</returns>
+			<param name="fieldId">The numeric identifier of the field.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ValidateField(System.String)">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ValidateField(System.String)"></see> method checks whether the specified field, identified by name, of the Axapta record is valid. Calling this method resembles calling the validateField member method of a record in the Axapta X++ language.</summary>
+			<returns>The return value is true if the field is valid, or false if the field is not valid.</returns>
+			<param name="fieldName">The textual identifier, or name, of the field.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ValidateWrite">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ValidateWrite"></see> method checks whether the Axapta record can be written. Calling this method resembles calling the validateWrite member method of a record in the Axapta X++ language.</summary>
+			<returns>The return value is true if the record can be written, or false if the record cannot be written.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Write">
+			<summary>The <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Write"></see> method writes the Axapta record to the database. Calling this method resembles calling the write member method of a record in the Axapta X++ language.</summary>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Caption">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Caption"></see> property returns the caption of the Axapta record. Retrieving this property resembles calling the caption member property of a record in the Axapta X++ language.</summary>
+			<returns>The return value is the caption for the Axapta record.</returns>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Company">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Company"></see> property sets or returns the company of the Axapta record. Retrieving this property resembles calling the company member property of a record in the Axapta X++ language.</summary>
+			<returns>The return value is the company for the Axapta record.</returns>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Field(System.Int32)">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Field(System.Int32)"></see> property sets or returns the value associated with a specified field, identified by field ID, of the Axapta record.</summary>
+			<returns>The return value is the object that contains the field value. For information about the return value data types, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</returns>
+			<param name="fieldId">The numeric identifier of the field.</param>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Field(System.String)">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Field(System.String)"></see> property sets or returns the value associated with a specified field, identified by field name, of the Axapta record.</summary>
+			<returns>The return value is the object that contains the field value. For information about the return value data types, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</returns>
+			<param name="fieldName">The textual identifier, or name, of the field.</param>
+			<exception cref="T:System.NotSupportedException">The called method returned an object whose data type is not supported. For more information about the supported data types for returned objects, see <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord"></see>.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.FieldLabel(System.Int32)">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.FieldLabel(System.Int32)"></see> property returns the field label associated with a specified field, identified by field ID, of the Axapta record.</summary>
+			<returns>The return value is the field label for the specified field.</returns>
+			<param name="fieldId">The numeric identifier of the field.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.FieldLabel(System.String)">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.FieldLabel(System.String)"></see> property returns the field label associated with a specified field, identified by field name, of the Axapta record.</summary>
+			<returns>The return value is the field label for the specified field.</returns>
+			<param name="fieldName">The textual identifier, or name, of the field.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:System.ArgumentNullException">A null reference was passed to a method that does not accept it as a valid argument.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Found">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Found"></see> property retrieves the status of the Axapta record. After <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.ExecuteStmt(System.String)"></see> or <see cref="M:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Next"></see> has been called, the <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.Found"></see> property indicates whether a record was found.</summary>
+			<returns>The return value is true if a record was found, or false if a record was not found.</returns>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.HelpField(System.Int32)">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.HelpField(System.Int32)"></see> property returns the help label associated with a specified field, identified by field ID, of the Axapta record.</summary>
+			<returns>The return value is the help label for the specified field.</returns>
+			<param name="fieldId">The numeric identifier of the field.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.HelpField(System.String)">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.HelpField(System.String)"></see> property returns the help label associated with a specified field, identified by field name, of the Axapta record.</summary>
+			<returns>The return value is the help label for the specified field.</returns>
+			<param name="fieldName">The textual identifier, or name, of the field.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.TooltipField(System.Int32)">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.TooltipField(System.Int32)"></see> property returns the ToolTip associated with a specified field, identified by field ID, of the Axapta record.</summary>
+			<returns>The return value is the ToolTip for the specified field.</returns>
+			<param name="fieldId">The numeric identifier of the field.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.TooltipField(System.String)">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.TooltipField(System.String)"></see> property returns the ToolTip associated with a specified field, identified by field name, of the Axapta record.</summary>
+			<returns>The return value is the ToolTip for the specified field.</returns>
+			<param name="fieldName">The textual identifier, or name, of the field.</param>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:System.ArgumentException">An argument passed to the method is invalid.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.TooltipRecord">
+			<summary>The <see cref="P:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecord.TooltipRecord"></see> property returns the ToolTip for the Axapta record.</summary>
+			<returns>The return value is the ToolTip for the Axapta record.</returns>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">An unexpected error has occurred with the Business Connector.</exception>
+			<exception cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">An attempt has been made to access an invalid record.</exception>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxaptaRecordNotValidException"></see> exception is thrown when the Axapta record being referenced is not valid.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.AxEventHandlerDelegate">
+			<summary>You can pass in instances of the <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.AxEventHandlerDelegate"></see> delegate to MSDAX and they will be transformed into ManagedEventDelegate X++ objects, once they are in X++ you can call the invoke method to call out and execute the managed event delegate.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.BusinessConnectorException"></see> exception is thrown when an unexpected error has occurred with the Business Connector.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.ConnectionLostException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.ConnectionLostException"></see> exception is thrown when the connection to the AOS is lost.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.DebuggerStopException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.DebuggerStopException"></see> exception is thrown when the Axapta debugger has been stopped.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.ExceptionErrorException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.ExceptionErrorException"></see> exception is thrown when an unexpected system exception has occurred.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.FatalErrorLoggedOffException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.FatalErrorLoggedOffException"></see> exception is thrown when the Axapta session is closed due to an error.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.InitializationFailedException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.InitializationFailedException"></see> exception is thrown when the .NET Business Connector fails to initialize.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.InvalidReturnValueException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.InvalidReturnValueException"></see> exception is thrown when a return value is invalid.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.LogonAsGuestNotSupportedException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.LogonAsGuestNotSupportedException"></see> exception is thrown when trying to logon as Guest from a non-web (IIS) scenario, for example, directly thru .NET Business Connector.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.LogonFailedException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.LogonFailedException"></see> exception is thrown during an Axapta logon failure.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.LogonSystemChangedException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.LogonSystemChangedException"></see> exception is thrown when logon to Axapta fails due to logon parameters not matching those currently in use for the Business Connector.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.LogonUserLockedOutException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.LogonUserLockedOutException"></see> exception is thrown when the user attempting a logon is locked out due to exceeding the maximum number of logon attempts.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.MethodUnknownException"></see> exception is thrown when the method being referenced is not known by the system.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.NoIISRightsException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoIISRightsException"></see> exception is thrown when logon to Axapta fails because the user has not been granted the proper IIS rights.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.NoSecurityKeyException"></see> exception is thrown when a requested operation fails because the required security key does not exist.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.NotLoggedOnException"></see> exception is thrown when a requested operation cannot be performed because the user is not logged on.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.PermissionDeniedException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.PermissionDeniedException"></see> exception is thrown when permission is denied to execute an operation.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.ServerCommunicationErrorException">
+			<summary>The  <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.ServerCommunicationErrorException"></see> exception is thrown when communication between the client computer and the server fails.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.ServerOutOfReachException">
+			<summary>The  <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.ServerOutOfReachException"></see> exception is thrown when communication with the server could not be established.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.ServerOutOfResourcesException">
+			<summary>The  <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.ServerOutOfResourcesException"></see> exception is thrown when the server terminates the session due to the server not having enough free resources.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.ServerUnavailableException">
+			<summary>The  <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.ServerUnavailableException"></see> exception is thrown when the server is unavailable. Axapta will attempt to connect to other servers listed in the client configuration.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.SessionTerminatedException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.SessionTerminatedException"></see> exception is thrown when the server terminates the session.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownClassHandleException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownClassHandleException"></see> exception is thrown when the class being referenced does not exist.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownRecordException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownRecordException"></see> exception is thrown when the record being referenced does not exist.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownTextException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownTextException"></see> exception is thrown when an unknown text exception has occurred.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.UnknownXPPClassException"></see> exception is thrown when an X++ exception has occurred.</summary>
+		</member>
+		<member name="T:Microsoft.Dynamics.BusinessConnectorNet.XppException">
+			<summary>The <see cref="T:Microsoft.Dynamics.BusinessConnectorNet.XppException"></see> exception is thrown when an X++ exception has occurred.</summary>
+		</member>
+	</members>
+</doc>

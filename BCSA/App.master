@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="App.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+ <head runat="server">
+  <title>DRYLOCK Barcode Scanner Application</title>
+  <link href="~/Styles/App.css" rel="stylesheet" type="text/css" />
+ </head>
+ <body>
+     <script type="text/javascript">
+      document.onkeydown = function(e){ 
+          if (e == null) { // ie 
+            keycode = event.keyCode; 
+          } else { // mozilla 
+            keycode = e.which; 
+          } 
+          if(keycode == 27){ // escape, close box, esc 
+              // Go back one page
+              history.back()
+          } 
+      };
+</script>
+  <form id="frmMain" runat="server">
+   <asp:ContentPlaceHolder ID="phldMain" runat="server"/>
+  </form>
+ </body>
+</html>

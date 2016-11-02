@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PalletMove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="palletId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="WareHouseId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="LocationId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletMoveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletMoveResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventCountingFindOrCreateJournal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="warehouseId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventCountingFindOrCreateJournalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="InventCountingFindOrCreateJournalResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventCountingCreateLine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="journalId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="itemId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="palletId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="batchId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="inventLocationId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="wmsLocationId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="qtyCounted" type="xs:double" />
+        <xs:element minOccurs="0" maxOccurs="1" name="UnitID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletBlockingCodeId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="OverwritePalletRecord" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventCountingCreateLineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="InventCountingCreateLineResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="palletId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletInfoResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BlockingCodeList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BlockingCodeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="BlockingCodeListResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BlockPallet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="palletId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="blockingCode" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BlockPalletResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="BlockPalletResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnBlockPallet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="palletId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="blockingCode" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnBlockPalletResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="UnBlockPalletResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompletePalleteTransport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="palletId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="WareHouseId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="LocationId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompletePalleteTransportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CompletePalleteTransportResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletTransportList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ForkLiftId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TransportType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletTransportListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletTransportListResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterPallet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ProdId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Qty" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterPalletResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="RegisterPalletResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectBlockPalletTransport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="palletId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectBlockPalletTransportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SelectBlockPalletTransportResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartPalletTransport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="palletId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="transportId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartPalletTransportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="StartPalletTransportResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PickingListPicking">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PickingListId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="InventTransId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ItemId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ConfigID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="WarehouseId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="LocationId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="BatchId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Quantity" type="xs:double" />
+        <xs:element minOccurs="0" maxOccurs="1" name="UnitId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="AllowCrossCheck" type="xs:boolean" />
+        <xs:element minOccurs="0" maxOccurs="1" name="refIdTransferTo" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PickingListPickingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="PickingListPickingResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterInventory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="InventRefType" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="InventRefId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ItemId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ConfigID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="WarehouseId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="LocationId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="BatchId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Quantity" type="xs:double" />
+        <xs:element minOccurs="0" maxOccurs="1" name="UnitId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterInventoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="RegisterInventoryResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventPickPalletInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="InventTransRefId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="palletId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InventPickPalletInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="InventPickPalletInfoResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletLoad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="WarehouseId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="LocationId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletLoadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletLoadResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletUnload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="WarehouseId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="LocationId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletUnloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletUnloadResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletLoadList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="termId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="execDT" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="langId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PIN" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="WarehouseId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="LocationId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PalletLoadListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="PalletLoadListResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

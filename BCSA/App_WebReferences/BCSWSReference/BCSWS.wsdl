@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BCSWS" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/bcsws/BCSWS.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:PalletMove" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PalletMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InventCountingFindOrCreateJournal_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventCountingFindOrCreateJournal" />
+  </wsdl:message>
+  <wsdl:message name="IService_InventCountingFindOrCreateJournal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventCountingFindOrCreateJournalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InventCountingCreateLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventCountingCreateLine" />
+  </wsdl:message>
+  <wsdl:message name="IService_InventCountingCreateLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventCountingCreateLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:PalletInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PalletInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_BlockingCodeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:BlockingCodeList" />
+  </wsdl:message>
+  <wsdl:message name="IService_BlockingCodeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BlockingCodeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_BlockPallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BlockPallet" />
+  </wsdl:message>
+  <wsdl:message name="IService_BlockPallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BlockPalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UnBlockPallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnBlockPallet" />
+  </wsdl:message>
+  <wsdl:message name="IService_UnBlockPallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnBlockPalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CompletePalleteTransport_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompletePalleteTransport" />
+  </wsdl:message>
+  <wsdl:message name="IService_CompletePalleteTransport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompletePalleteTransportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletTransportList_InputMessage">
+    <wsdl:part name="parameters" element="tns:PalletTransportList" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletTransportList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PalletTransportListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterPallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterPallet" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterPallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterPalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectBlockPalletTransport_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBlockPalletTransport" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectBlockPalletTransport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectBlockPalletTransportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_StartPalletTransport_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartPalletTransport" />
+  </wsdl:message>
+  <wsdl:message name="IService_StartPalletTransport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartPalletTransportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PickingListPicking_InputMessage">
+    <wsdl:part name="parameters" element="tns:PickingListPicking" />
+  </wsdl:message>
+  <wsdl:message name="IService_PickingListPicking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PickingListPickingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterInventory" />
+  </wsdl:message>
+  <wsdl:message name="IService_RegisterInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InventPickPalletInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InventPickPalletInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService_InventPickPalletInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InventPickPalletInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:PalletLoad" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletLoad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PalletLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletUnload_InputMessage">
+    <wsdl:part name="parameters" element="tns:PalletUnload" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletUnload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PalletUnloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletLoadList_InputMessage">
+    <wsdl:part name="parameters" element="tns:PalletLoadList" />
+  </wsdl:message>
+  <wsdl:message name="IService_PalletLoadList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PalletLoadListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Login" message="tns:IService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LoginResponse" message="tns:IService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PalletMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/PalletMove" message="tns:IService_PalletMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PalletMoveResponse" message="tns:IService_PalletMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventCountingFindOrCreateJournal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InventCountingFindOrCreateJournal" message="tns:IService_InventCountingFindOrCreateJournal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InventCountingFindOrCreateJournalResponse" message="tns:IService_InventCountingFindOrCreateJournal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventCountingCreateLine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InventCountingCreateLine" message="tns:IService_InventCountingCreateLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InventCountingCreateLineResponse" message="tns:IService_InventCountingCreateLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PalletInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/PalletInfo" message="tns:IService_PalletInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PalletInfoResponse" message="tns:IService_PalletInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BlockingCodeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/BlockingCodeList" message="tns:IService_BlockingCodeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/BlockingCodeListResponse" message="tns:IService_BlockingCodeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BlockPallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/BlockPallet" message="tns:IService_BlockPallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/BlockPalletResponse" message="tns:IService_BlockPallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnBlockPallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UnBlockPallet" message="tns:IService_UnBlockPallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UnBlockPalletResponse" message="tns:IService_UnBlockPallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompletePalleteTransport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CompletePalleteTransport" message="tns:IService_CompletePalleteTransport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CompletePalleteTransportResponse" message="tns:IService_CompletePalleteTransport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PalletTransportList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/PalletTransportList" message="tns:IService_PalletTransportList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PalletTransportListResponse" message="tns:IService_PalletTransportList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RegisterPallet" message="tns:IService_RegisterPallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterPalletResponse" message="tns:IService_RegisterPallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectBlockPalletTransport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectBlockPalletTransport" message="tns:IService_SelectBlockPalletTransport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectBlockPalletTransportResponse" message="tns:IService_SelectBlockPalletTransport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartPalletTransport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/StartPalletTransport" message="tns:IService_StartPalletTransport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/StartPalletTransportResponse" message="tns:IService_StartPalletTransport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PickingListPicking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/PickingListPicking" message="tns:IService_PickingListPicking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PickingListPickingResponse" message="tns:IService_PickingListPicking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RegisterInventory" message="tns:IService_RegisterInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RegisterInventoryResponse" message="tns:IService_RegisterInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InventPickPalletInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InventPickPalletInfo" message="tns:IService_InventPickPalletInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InventPickPalletInfoResponse" message="tns:IService_InventPickPalletInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PalletLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/PalletLoad" message="tns:IService_PalletLoad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PalletLoadResponse" message="tns:IService_PalletLoad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PalletUnload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/PalletUnload" message="tns:IService_PalletUnload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PalletUnloadResponse" message="tns:IService_PalletUnload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PalletLoadList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/PalletLoadList" message="tns:IService_PalletLoadList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PalletLoadListResponse" message="tns:IService_PalletLoadList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PalletMove">
+      <soap:operation soapAction="http://tempuri.org/IService/PalletMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventCountingFindOrCreateJournal">
+      <soap:operation soapAction="http://tempuri.org/IService/InventCountingFindOrCreateJournal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventCountingCreateLine">
+      <soap:operation soapAction="http://tempuri.org/IService/InventCountingCreateLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PalletInfo">
+      <soap:operation soapAction="http://tempuri.org/IService/PalletInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockingCodeList">
+      <soap:operation soapAction="http://tempuri.org/IService/BlockingCodeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockPallet">
+      <soap:operation soapAction="http://tempuri.org/IService/BlockPallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBlockPallet">
+      <soap:operation soapAction="http://tempuri.org/IService/UnBlockPallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompletePalleteTransport">
+      <soap:operation soapAction="http://tempuri.org/IService/CompletePalleteTransport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PalletTransportList">
+      <soap:operation soapAction="http://tempuri.org/IService/PalletTransportList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPallet">
+      <soap:operation soapAction="http://tempuri.org/IService/RegisterPallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectBlockPalletTransport">
+      <soap:operation soapAction="http://tempuri.org/IService/SelectBlockPalletTransport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartPalletTransport">
+      <soap:operation soapAction="http://tempuri.org/IService/StartPalletTransport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PickingListPicking">
+      <soap:operation soapAction="http://tempuri.org/IService/PickingListPicking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterInventory">
+      <soap:operation soapAction="http://tempuri.org/IService/RegisterInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InventPickPalletInfo">
+      <soap:operation soapAction="http://tempuri.org/IService/InventPickPalletInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PalletLoad">
+      <soap:operation soapAction="http://tempuri.org/IService/PalletLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PalletUnload">
+      <soap:operation soapAction="http://tempuri.org/IService/PalletUnload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PalletLoadList">
+      <soap:operation soapAction="http://tempuri.org/IService/PalletLoadList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BCSWS">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost/bcsws/BCSWS.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
